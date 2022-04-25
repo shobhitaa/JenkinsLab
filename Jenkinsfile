@@ -7,7 +7,7 @@ pipeline {
         bat 'mvn test'
       }
     }
-    stage('Build) {
+    stage('Build') {
           steps {
             echo 'Building jar files...'
             bat 'mvn package'
