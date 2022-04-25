@@ -1,17 +1,20 @@
 pipeline {
-  agent any
-  stages {
-    stage('Testing') {
-      steps {
-        echo 'running Tests'
-        bat 'mvn test'
-      }
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                echo 'build hogaya'
+            }
+        }
+        stage('Test') { 
+            steps {
+                echo 'test hogaya'
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo 'deploy bhi hogaya'
+            }
+        }
     }
-    stage('Build') {
-          steps {
-            echo 'Building jar files...'
-            bat 'mvn package'
-          }
-    }
-    }
- }
+}
