@@ -14,6 +14,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                 echo 'deploy bhi hogaya'
+                bat 'python LabExamDO.ipynb'
             }
         }
     }
