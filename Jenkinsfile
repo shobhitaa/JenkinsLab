@@ -14,8 +14,7 @@ pipeline {
         stage('Deploy') { 
             steps {
                 echo 'deploy bhi hogaya'
-                def output = bat(script: 'LabExamDO.ipynb', returnStdout: true)
-                echo output
+                python LabExamDO.ipynb
             }
         }
     }
