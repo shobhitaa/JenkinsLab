@@ -14,7 +14,8 @@ pipeline {
         stage('Deploy') { 
             steps {
                 echo 'deploy bhi hogaya'
-                python3 'LabExamDO.ipynb'
+                python -u LabExamDO.ipynb
+                
             }
         }
     }
